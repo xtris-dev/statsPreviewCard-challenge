@@ -1,0 +1,184 @@
+/* GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+/* VARIABLES CSS */
+:root {
+	/* COLORS */
+	--main-background: hsl(233, 47%, 7%);
+	--card-background: hsl(244, 38%, 16%);
+	--accent: hsl(277, 64%, 61%);
+
+	--main-heading: hsl(0, 0%, 100%);
+	--main-paragraph: hsla(0, 0%, 100%, 0.75);
+	--stat-heading: hsla(0, 0%, 100%, 0.6);
+}
+
+/* ==================== BASE SETTINGS ==================== */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	font-family: "Inter", sans-serif;
+	font-size: 1.5rem;
+	background-color: var(--main-background);
+	color: #fff;
+}
+
+/* ==================== MAIN CSS / MOBILE FIRST ==================== */
+#card-component {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.card {
+	background: var(--card-background);
+	max-width: 330px;
+	border-radius: 1rem;
+}
+
+.img-hero {
+	background: var(--accent);
+	height: 242px;
+	border-top-left-radius: 1rem;
+	border-top-right-radius: 1rem;
+}
+.img-hero img {
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	mix-blend-mode: multiply;
+	border-top-left-radius: 1rem;
+	border-top-right-radius: 1rem;
+}
+
+.infos-left {
+	padding: 3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.infos-left h1 {
+	font-size: 2.7rem;
+	text-align: center;
+}
+.infos-left span {
+	color: var(--accent);
+}
+.infos-left p {
+	text-align: center;
+	color: var(--main-paragraph);
+	font-weight: 400;
+	line-height: 2.5rem;
+	margin-top: 1.5rem;
+}
+
+.stats-info {
+	text-align: center;
+	margin-top: 1rem;
+}
+.stat {
+	margin-top: 3rem;
+}
+.stat h3 {
+	font-size: 2.3rem;
+}
+.stat h4 {
+	font-size: 1.2rem;
+	letter-spacing: 1.7px;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: var(--stat-heading);
+	margin-top: 0.7rem;
+}
+
+#img-desktop {
+	display: none;
+}
+#img-mobile {
+	display: block;
+}
+
+/* ==================== MEDIA QUERIES / RESPONSIVE DESKTOP ==================== */
+@media only screen and (min-width: 1440px) {
+	.card {
+		display: flex;
+		flex-direction: row-reverse;
+		max-width: 1000px;
+	}
+
+	.img-hero {
+		background: var(--accent);
+		height: auto;
+		border-top-right-radius: 1rem;
+		border-bottom-right-radius: 1rem;
+		border-top-left-radius: 0;
+	}
+	.img-hero img {
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		mix-blend-mode: multiply;
+		border-top-right-radius: 1rem;
+		border-bottom-right-radius: 1rem;
+	}
+	.infos-left {
+		padding: 0;
+		margin: 6rem 10rem 4rem 6rem;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		width: 35%;
+	}
+
+	.infos-left h1 {
+		font-size: 3rem;
+		text-align: left;
+		line-height: 3.7rem;
+	}
+	.infos-left span {
+		color: var(--accent);
+	}
+	.infos-left p {
+		text-align: left;
+		color: var(--main-paragraph);
+		font-weight: 400;
+		line-height: 2.5rem;
+		margin-top: 2rem;
+	}
+
+	.stats-info {
+		display: flex;
+		text-align: center;
+		margin-top: 3rem;
+	}
+	.stat {
+		margin-right: 5rem;
+	}
+	.stat h3 {
+		font-size: 2.3rem;
+	}
+	.stat h4 {
+		font-size: 1.2rem;
+		letter-spacing: 1.7px;
+		font-weight: 400;
+		text-transform: uppercase;
+		color: var(--stat-heading);
+		margin-top: 0.7rem;
+	}
+
+	#img-mobile {
+		display: none;
+	}
+	#img-desktop {
+		display: block;
+	}
+}
